@@ -26,9 +26,9 @@ function Item({goal, setGoals }) {
         padding: '16px',
         borderRadius: '10px',
         background: isOverdue
-          ? "aquamarine"
+          ? "grey"
           : isWarning
-          ? "aquamarine"
+          ? "grey"
           : 'rgba(255,255,255,0.08)',
         color: "brown",
         boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
