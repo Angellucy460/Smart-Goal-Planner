@@ -6,7 +6,7 @@ The app includes full **Create, Read, Update, and Delete (CRUD)** functionality 
 
 ---
 
-## ❓ What Problem Does It Solve?
+##  What Problem Does It Solve?
 
 | Problem                          | SMART Solution                                             |
 |----------------------------------|-------------------------------------------------------------|
