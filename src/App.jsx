@@ -11,7 +11,7 @@ function App() {
   },[]);
   return (
     <div>
-      <h1>Goal Tracker</h1>
+      <h1 style={{textAlign: "center", fontsize: "36px", color: "purple", }}>Goal Tracker</h1>
       <GoalForm setGoals={setGoals}/>
       <GoalList goals={goals} setGoals={setGoals}/>
     </div>
