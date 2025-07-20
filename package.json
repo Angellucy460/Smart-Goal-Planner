@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/Angellucy460/Smart-Goal-Planner.git",
+  "homepage": "https://Angellucy460.github.io/Smart-Goal-Planner",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
