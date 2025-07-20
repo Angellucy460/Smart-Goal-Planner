@@ -5,6 +5,7 @@
   "type": "module",
   "homepage": "https://github.com/Angellucy460/Smart-Goal-Planner",
   "scripts": {
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
