@@ -1,4 +1,4 @@
-# 🧠 SMART Goal Planner
+# SMART GOAL PLANNER
 
 The **SMART Goal Planner** is a personal goal-tracking tool that helps users manage multiple goals by making them **Specific**, **Measurable**, **Achievable**, **Relevant**, and **Time-bound**. It boosts productivity, maintains focus, and encourages consistency.
 
