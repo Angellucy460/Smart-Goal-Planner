@@ -21,7 +21,7 @@ The app includes full **Create, Read, Update, and Delete (CRUD)** functionality 
 
 ---
 
-## 🚀 Quick Setup & Usage
+##  Quick Setup & Usage
 
 ### 1. Download or Clone the Project
 
