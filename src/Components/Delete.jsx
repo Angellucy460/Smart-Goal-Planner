@@ -1,8 +1,10 @@
+const URL = "https://angellucy460.github.io/Smart-Goal-Planner/"
+
 function Delete({id, setGoals}) {
     function HandleDelete() {
-        fetch(`http://localhost:3000/goals/${id}`, { method: "DELETE" })
+        fetch(`${URL}/goals/${id}`, { method: "DELETE" })
             .then(() => {
-                fetch("http://localhost:3000/goals")
+                fetch(`${URL}/goals`)
                     .then(res => res.json())
                     .then(data => setGoals(data));
             });

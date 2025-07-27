@@ -2,10 +2,13 @@ import  { useEffect, useState} from "react";
 import GoalList from "./Components/GoalList";
 import GoalForm from "./Components/GoalForm"; 
 
+const URL = "https://angellucy460.github.io/Smart-Goal-Planner/"
+
+
 function App() {
   const [goals, setGoals] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/goals")
+    fetch(`${URL}/goals`)
     .then(res => res.json())
     .then(data => setGoals(data))
   },[]);

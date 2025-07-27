@@ -1,4 +1,6 @@
 import {useState} from "react"
+
+const URL = "https://angellucy460.github.io/Smart-Goal-Planner/"
 function GoalForm(){
     const [forms, SetForms] = useState({
         targetAmount: "",
@@ -18,7 +20,7 @@ function GoalForm(){
             createdAt: new Date().toISOString().split('T')[0]
         };
 
-        fetch("http://localhost:3000/goals", {
+        fetch(`${URL}`/goals, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newGoal)
@@ -26,7 +28,7 @@ function GoalForm(){
         .then(res => res.json())
         .then(() => {
            
-            fetch("http://localhost:3000/goals")
+            fetch(`${URL}/goals`)
                 .then(res => res.json())
                 .then(data => setGoals(data));
         });
