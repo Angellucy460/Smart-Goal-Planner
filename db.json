@@ -89,24 +89,6 @@
       "category": "Home",
       "deadline": "2025-03-31",
       "createdAt": "2024-05-15"
-    },
-    {
-      "id": "bdcc",
-      "name": "eating",
-      "targetAmount": 500,
-      "category": "food",
-      "deadline": "2025-07-23",
-      "savedAmount": 0,
-      "createdAt": "2025-07-29T20:01:34.111Z"
-    },
-    {
-      "id": "3d6e",
-      "name": "Angel Lucy",
-      "targetAmount": 5000,
-      "category": "jkiuhj",
-      "deadline": "2025-07-17",
-      "savedAmount": 566,
-      "createdAt": "2025-07-29T20:02:44.597Z"
     }
   ]
 }
