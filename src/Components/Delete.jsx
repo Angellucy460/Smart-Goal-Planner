@@ -1,18 +1,16 @@
-const URL = "https://angellucy460.github.io/Smart-Goal-Planner/"
+const url="https://phase-2-week-2-code-challenge-sgp.onrender.com"
 
-function Delete({id, setGoals}) {
-    function HandleDelete() {
-        fetch(`${URL}/goals/${id}`, { method: "DELETE" })
+function Delete({id,setgoals}){
+       function handleDelete() {
+        fetch(`${url}/goals/${id}`, { method: "DELETE" })
             .then(() => {
-                fetch(`${URL}/goals`)
+                fetch(`${url}/goals`)
                     .then(res => res.json())
-                    .then(data => setGoals(data));
+                    .then(data => setgoals(data));
             });
     }
 
-    return <button onClick={HandleDelete} style={{backgroundcolor:"red"}} >Delete</button>;
-    }
-
-
-
+    return <button onClick={handleDelete}>Delete</button>;
+   
+}
 export default Delete;
