@@ -91,15 +91,6 @@
       "createdAt": "2024-05-15"
     },
     {
-      "id": "b2a3",
-      "name": "travel",
-      "targetAmount": 4000,
-      "category": "food",
-      "deadline": "2025-07-16",
-      "savedAmount": 0,
-      "createdAt": "2025-07-29T20:00:58.161Z"
-    },
-    {
       "id": "bdcc",
       "name": "eating",
       "targetAmount": 500,
