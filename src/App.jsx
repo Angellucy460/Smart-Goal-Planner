@@ -1,67 +1,33 @@
-import { useEffect, useState } from "react";
-import GoalForm from "./Components/GoalForm";
-import GoalList from "./Components/GoalList";
-import Overview from "./Components/Overview";
-// import './App.css';
 
-const API_URL = "http://localhost:3000/goals";
+import { useState,useEffect } from "react";
+import Goal from "./goal";
+import List from "./list";
+import Deposit from "./Deposit";
 
-function App() {
-  const [goals, setGoals] = useState([]);
+const url="http://localhost:3001/"
+function App(){
+  const[goals,setgoals]=useState([]);
+  
 
-  // Fetch goals from JSON server when app loads
-  useEffect(() => {
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((data) => setGoals(data))
-      .catch((error) => console.error("Error fetching goals:", error));
-  }, []);
+    useEffect(()=>{
+      fetch(`${url}/goals`)
+      .then(res=> res.json())
+      .then(data =>setgoals(data))
+    },[])
 
-  // Add a new goal
-  const addGoal = (newGoal) => {
-    fetch(API_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newGoal),
-    })
-      .then((res) => res.json())
-      .then((data) => setGoals((prevGoals) => [...prevGoals, data]));
-  };
-
-  // Update a goal (used for deposits or edits)
-  const updateGoal = (id, updatedFields) => {
-    fetch(`${API_URL}/${id}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(updatedFields),
-    })
-      .then((res) => res.json())
-      .then((updatedGoal) => {
-        setGoals((prevGoals) =>
-          prevGoals.map((goal) =>
-            goal.id === id ? updatedGoal : goal
-          )
-        );
-      });
-  };
-
-  // Delete a goal
-  const deleteGoal = (id) => {
-    fetch(`${API_URL}/${id}`, {
-      method: "DELETE",
-    }).then(() => {
-      setGoals((prevGoals) => prevGoals.filter((goal) => goal.id !== id));
-    });
-  };
-
-  return (
-    <div className="container">
-      <h1>Smart Goal Planner</h1>
-      <GoalForm onAddGoal={addGoal} />
-      <Overview goals={goals} />
-      <GoalList goals={goals} onUpdate={updateGoal} onDelete={deleteGoal} />
-    </div>
-  );
+    return(
+      <div>
+        <h1 style={{paddingLeft:"1100px"}}>Tracker</h1>
+        <div style={{paddingLeft:"800px"}}>
+          <Goal setgoals={setgoals}/>
+        </div>
+        <div style={{paddingLeft:"800px"}}>
+          <Deposit goals={goals} setgoals={setgoals} />
+        </div>
+        <div style={{paddingLeft:"500px"}}>
+           <List goals={goals} setgoals={setgoals}/>
+        </div>
+     </div>
+    )
 }
-
 export default App;
