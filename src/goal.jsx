@@ -21,7 +21,7 @@ function Goal({ setgoals }) {
             createdAt: new Date().toISOString().split('T')[0]
         };
 
-        fetch(`${url}/goals`, {
+        fetch(`${url}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newGoal)
