@@ -10,7 +10,7 @@ function App(){
   
 
     useEffect(()=>{
-      fetch(`${url}/goals`)
+      fetch(`${url}`)
       .then(res=> res.json())
       .then(data =>setgoals(data))
     },[])
