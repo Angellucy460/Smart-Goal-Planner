@@ -50,23 +50,9 @@ function App() {
     fetch(`${API_URL}/${id}`, {
       method: "DELETE",
     }).then(() => {
-    const deleteGoal = (id) => {
-  setGoals(goals.filter(goal => goal.id !== id));
-};
-
-const editGoal = (updatedGoal) => {
-  setGoals(goals.map(goal => (goal.id === updatedGoal.id ? updatedGoal : goal)));
-};
-        setGoals((prevGoals) => prevGoals.filter((goal) => goal.id !== id));
-      });
+      setGoals((prevGoals) => prevGoals.filter((goal) => goal.id !== id));
+    });
   };
-
-<main className="app-container">
-  <h1>SMART Goal Planner</h1>
-  <GoalForm onAddGoal={addGoal} />
-  <Overview goals={goals} />
-  <GoalList goals={goals} />
-</main>
 
   return (
     <div className="container">
