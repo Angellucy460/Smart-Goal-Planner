@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import GoalForm from "./components/GoalForm";
 import GoalList from "./components/GoalList";
 import Overview from "./components/Overview";
-import './App.css';
+// import './App.css';
 
 const API_URL = "http://localhost:3000/goals";
 
