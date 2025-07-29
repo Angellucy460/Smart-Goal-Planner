@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Angellucy460.github.io/Smart-Goal-Planner",
+  "homepage": "http://localhost:3000/goals",
     "engines": {
   "node": ">=20"
 },
